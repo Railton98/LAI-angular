@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1>Incluir Foto para o Álbum: {{ album?.name }}</h1>
+  </div>
+  <div class="col-md-12">
+    <div class="form-group">
+      <label for="name">Nome</label>
+      <input type="text" id="name" placeholder="Digite o Nome da Foto" class="form-control" [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+      <label for="file_name">Imagem</label>
+      <input type="file" id="file_name" class="form-control" (change)="handleFile($event.target.files[0])">
+    </div>
+  </div>
+  <div class="col-md-12">
+    <button class="btn btn-primary" (click)="upload()">Fazer Upload</button>
+  </div>
+</div>
